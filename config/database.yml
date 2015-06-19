@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  port: 5432
+  username: rails
+  password: rails
+  encoding: utf8
+
+development:
+  <<: *default
+  database: book-hunter
+
+test:
+  <<: *default
+  database: book-hunter
+
+production:
+  <<: *default
+  database: book-hunter
