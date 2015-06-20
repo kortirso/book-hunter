@@ -23,7 +23,7 @@
 	// Настройки
 	$.DLMenu.defaults = {
 		// Классы анимационных эффектов
-		animationClasses : { in : 'dl-animate-in-1', out : 'dl-animate-out-1' }
+		animationClasses : { in : 'dl-animate-in', out : 'dl-animate-out' }
 	};
 
 	$.DLMenu.prototype = {

@@ -1,1 +1,7 @@
 %h1 {{ h1 }}
+.col-xs-9.static
+	
+.col-xs-3.static.lastbooks
+	%h3 Последние книги
+	%ul
+		%li{'ng-repeat' => 'book in lastbooks'} {{ book.name_ru}}

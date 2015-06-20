@@ -1,3 +1,29 @@
-// Place all the styles related to the Library controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,cyrillic);
+
+* {
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	.static {
+		position: static;
+	}
+
+	.lastbooks {
+		ul {
+			padding-left :10px;
+			li {
+				list-style: none;
+			}
+		}
+	}
+}

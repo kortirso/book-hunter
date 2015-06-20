@@ -1,1 +1,9 @@
-%h1 {{ caption }}
+%h1 {{ category.caption_ru }}
+%p {{ category.caption }}
+.col-xs-6.col-sm-4.col-lg-3.static{"ng-repeat" => "book in books"}
+	%p {{ book.name_ru }}
+	%p {{ book.author }}
+	%p
+		%img.img-responsive{src: '', "ng-src" => '{{ book.image }}'}
+	%p
+		%a.btn.btn-success{href: '{{ book.link }}'} Скачать
