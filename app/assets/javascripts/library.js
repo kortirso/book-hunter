@@ -5,16 +5,12 @@ library.config(function($routeProvider) {
 			templateUrl: 'index.html',
 			controller: 'IndexCtrl'
 		})
-		.when('/#', {
-			templateUrl: 'index.html',
-			controller: 'IndexCtrl'
-		})
 		.when('/books/:name', {
 			templateUrl: 'show.html',
 			controller: 'ShowCtrl'
 		})
 		.otherwise({
-			redirectTo: '/#'
+			redirectTo: '/'
 		});
 });
 
@@ -31,3 +27,10 @@ library.controller('IndexCtrl', ['$scope', function($scope) {
 library.controller('ShowCtrl', ['$routeParams','$scope', function($routeParams,$scope) {
 	$scope.caption = $routeParams.name;
 }]);
+
+library.directive('display', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'display.html'
+	};
+});
