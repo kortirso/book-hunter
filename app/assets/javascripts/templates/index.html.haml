@@ -5,4 +5,4 @@
 	%h3 Последние книги
 	%ul
 		%li{'ng-repeat' => 'book in lastbooks'}
-			%a{href: '/#/book/{{ book.id }}' } {{ book.name_ru}}, {{ book.author }}
+			= link_to '{{ book.name_ru}}, {{ book.author }}', '/#/book/{{ book.id }}'
