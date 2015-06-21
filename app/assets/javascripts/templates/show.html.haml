@@ -4,6 +4,7 @@
 	%p {{ book.name_ru }}
 	%p {{ book.author }}
 	%p
-		%img.img-responsive{src: '', "ng-src" => '{{ book.image }}'}
+		%a{href: '/#/book/{{ book.id }}' }
+			%img.img-responsive{src: '', "ng-src" => '{{ book.image }}'}
 	%p
 		%a.btn.btn-success{href: '{{ book.link }}'} Скачать

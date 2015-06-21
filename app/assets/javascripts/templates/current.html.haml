@@ -1,0 +1,16 @@
+%h1 {{ h1 }}
+.col-xs-12.static
+	.row
+		.col-xs-3.static
+			%p
+				%img.img-responsive{src: '', "ng-src" => '{{ book.image }}'}
+		.col-xs-9.static
+			%p Название - {{ book.name_ru }}
+			%p Автор - {{ book.author }}
+			%p Издатель - {{ book.publisher }}
+			%p ISBN - {{ book.isbn }}
+			%p
+				%a.btn.btn-success{href: '{{ book.link }}'} Скачать
+	.row
+		.col-xs-12.static
+			%p {{ book.caption }}

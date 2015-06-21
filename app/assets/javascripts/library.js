@@ -9,6 +9,10 @@ library.config(function($routeProvider) {
 			templateUrl: 'show.html',
 			controller: 'ShowCtrl'
 		})
+		.when('/book/:id', {
+			templateUrl: 'current.html',
+			controller: 'CurrentCtrl'
+		})
 		.otherwise({
 			redirectTo: '/'
 		});
@@ -35,6 +39,14 @@ library.controller('ShowCtrl', ['$http','$routeParams','$scope', function($http,
 	});
 	$http.get($scope.url_books).success(function(data) {
 		$scope.books = data;
+	});
+}]);
+
+library.controller('CurrentCtrl', ['$http','$routeParams','$scope', function($http,$routeParams,$scope) {
+	$scope.h1 = "Подробное описание книги";
+	$scope.url = '/book/' + $routeParams.id + '.json';
+	$http.get($scope.url).success(function(data) {
+		$scope.book = data;
 	});
 }]);
 

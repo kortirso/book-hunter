@@ -19,9 +19,16 @@ class LibraryController < ApplicationController
 	end
 
 	def books
-		books = Book.where(point_id: params[:id]).all
+		books = Book.where(point_id: params[:id]).order(created_at: :desc).all
 		respond_with(books) do |format|
 			format.json { render :json => books.as_json }
+		end
+	end
+
+	def currentbook
+		book = Book.find(params[:id])
+		respond_with(book) do |format|
+			format.json { render :json => book.as_json }
 		end
 	end
 
