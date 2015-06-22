@@ -18,12 +18,6 @@ library.config(function($routeProvider) {
 		});
 });
 
-library.controller('MenuCtrl', ['$http','$scope', function($http,$scope) {
-	$http.get('/menu.json').success(function(data) {
-		$scope.menu = data;
-	});
-}]);
-
 library.controller('IndexCtrl', ['$http','$scope', function($http,$scope) {
 	$scope.h1 = "Электронное книгохранилище Book-Hunter";
 	$http.get('/lastbooks.json').success(function(data) {
@@ -43,16 +37,8 @@ library.controller('ShowCtrl', ['$http','$routeParams','$scope', function($http,
 }]);
 
 library.controller('CurrentCtrl', ['$http','$routeParams','$scope', function($http,$routeParams,$scope) {
-	$scope.h1 = "Подробное описание книги";
 	$scope.url = '/book/' + $routeParams.id + '.json';
 	$http.get($scope.url).success(function(data) {
 		$scope.book = data;
 	});
 }]);
-
-library.directive('display', function() {
-	return {
-		restrict: 'E',
-		templateUrl: 'display.html'
-	};
-});
