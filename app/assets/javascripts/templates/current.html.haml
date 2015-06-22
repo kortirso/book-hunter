@@ -2,15 +2,13 @@
 .col-xs-12.static
 	.row
 		.col-xs-3.static
-			%p
-				%img.img-responsive{src: '', 'ng-src' => '{{ book.image }}'}
+			%p= image_tag '', 'ng-src' => '{{ book.image }}', class: 'img-responsive'
 		.col-xs-9.static
 			%p Название - {{ book.name_ru }}
 			%p Автор - {{ book.author }}
 			%p Издатель - {{ book.publisher }}
 			%p ISBN - {{ book.isbn }}
-			%p
-				= link_to 'Скачать', '{{ book.link }}', class: 'btn btn-success'
+			%p= link_to 'Скачать', '{{ book.link }}', class: 'btn btn-success'
 	.row
 		.col-xs-12.static
 			%p {{ book.caption }}
