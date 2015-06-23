@@ -1,7 +1,7 @@
 %h2 {{ book.name_ru }}
 .row
 	.col-xs-12.col-sm-6.col-md-3
-		%p= image_tag '', 'ng-src' => '{{ book.image }}', class: 'img-responsive'
+		%p= image_tag '', 'ng-src' => '{{ book.image["url"] }}', class: 'img-responsive'
 	.col-xs-12.col-sm-6.col-md-9
 		%p Название - {{ book.name_ru }}
 		%p Автор - {{ book.author }}

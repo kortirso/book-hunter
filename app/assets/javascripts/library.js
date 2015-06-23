@@ -5,7 +5,7 @@ library.config(function($routeProvider) {
 			templateUrl: 'index.html',
 			controller: 'IndexCtrl'
 		})
-		.when('/books/:id', {
+		.when('/library/:id', {
 			templateUrl: 'show.html',
 			controller: 'ShowCtrl'
 		})
@@ -27,7 +27,7 @@ library.controller('IndexCtrl', ['$http','$scope', function($http,$scope) {
 
 library.controller('ShowCtrl', ['$http','$routeParams','$scope', function($http,$routeParams,$scope) {
 	$scope.url_cat = '/category/' + $routeParams.id + '.json';
-	$scope.url_books = '/books/' + $routeParams.id + '.json';
+	$scope.url_books = '/library/' + $routeParams.id + '.json';
 	$http.get($scope.url_cat).success(function(data) {
 		$scope.category = data;
 	});
@@ -41,4 +41,5 @@ library.controller('CurrentCtrl', ['$http','$routeParams','$scope', function($ht
 	$http.get($scope.url).success(function(data) {
 		$scope.book = data;
 	});
+	$scope.string = $scope.book;
 }]);

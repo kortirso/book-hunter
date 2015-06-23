@@ -11,5 +11,4 @@
 /log/*
 !/log/.keep
 /tmp
-/public/booklibrary/*
-/public/images/*
+/public/uploads/*

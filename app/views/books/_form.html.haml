@@ -1,0 +1,26 @@
+.row.simple_form
+	%h1 Новая книга
+	= simple_form_for @book, html: {multipart: true} do |f|
+		.col-xs-12.col-md-6
+			= f.input :name, label: 'Название книги в адресной строке'
+		.col-xs-12.col-md-6
+			= f.input :name_ru, label: 'Название книги на русском языке'
+		.col-xs-12.col-md-6
+			= f.input :author, label: 'Автор'
+		.col-xs-12.col-md-6
+			= f.input :publisher, label: 'Издатель'
+		.col-xs-12.col-md-6
+			= f.input :isbn, label: 'ISBN'
+		.col-xs-12.col-md-6
+			= f.input :caption, label: 'Краткое описание книги'
+		.col-xs-12.col-md-6
+			= f.association :point, label: 'Категория', label_method: :caption_ru, value_method: :id, include_blank: false
+		.col-xs-12
+			%h4 Изображение для рецепта
+			%p= f.file_field :image, label: 'Изображение'
+		.col-xs-12
+			%h4 Книга
+			%p= f.file_field :link, label: 'Укажите файл книги'
+		.col-xs-12
+			.actions
+				= f.button :submit, class: "btn", value: 'Добавить книгу'
