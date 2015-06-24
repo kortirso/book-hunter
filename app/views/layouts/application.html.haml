@@ -9,6 +9,9 @@
 		.container
 			.row
 				.col-xs-6.col-sm-4.col-md-3
+					- if current_admin
+						%p= current_admin.email
+						%p= link_to "Выйти", destroy_admin_session_path, method: :delete, class: 'btn'
 					%h3 Навигация в библиотеке
 					= render 'layouts/menu'
 				.col-xs-6.col-sm-8.col-md-9

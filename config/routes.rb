@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+	devise_for :admins
 	get 'books' => 'books#index', as: 'books'
 	get 'books/new' => 'books#new', as: 'new_book'
 	post 'books' => 'books#create'
@@ -10,4 +11,5 @@ Rails.application.routes.draw do
 	get 'book/:id' => 'library#currentbook'
 	get 'lastbooks' => 'library#lastbooks'
 	root to: 'library#index'
+	match "*path", to: "application#catch_404", via: :all
 end

@@ -10,7 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
-#gem 'devise'
+gem 'devise'
 gem 'haml'
 gem 'bower-rails'
 gem 'responders', '~> 2.0'
@@ -21,10 +21,6 @@ gem 'carrierwave'
 gem 'rmagick'
 #gem 'kaminari'
 #gem 'pg_search'
-
-#gem 'omniauth-facebook'
-#gem 'omniauth-vkontakte'
-#gem 'omniauth-github'
 
 group :test do
 	gem 'rspec-rails'
