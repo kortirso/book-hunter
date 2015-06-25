@@ -4,13 +4,6 @@ class LibraryController < ApplicationController
 	def index
 	end
 
-	def menu
-		menu = Point.all
-		respond_with(menu) do |format|
-			format.json { render :json => menu.as_json }
-		end
-	end
-
 	def category
 		category = Point.where(id: params[:id]).first
 		respond_with(category) do |format|
