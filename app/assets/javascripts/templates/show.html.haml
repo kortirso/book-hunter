@@ -1,8 +1,12 @@
-%h1 {{ category.caption_ru }}
-%p {{ category.caption }}
-.row
-	.col-xs-12.col-sm-6.col-md-4{"ng-repeat" => "book in books"}
-		%p {{ book.name_ru }}
-		%p {{ book.author }}
-		%p= link_to image_tag('', 'ng-src' => '{{ book.image["url"] }}', class: 'img-responsive'), '/#/book/{{ book.id }}'
-		%p= link_to 'Скачать', '{{ book.link }}', class: 'btn'
+%div{'ng-show' => 'category.caption_ru'}
+	%h1 {{ category.caption_ru }}
+	%p {{ category.caption }}
+	.row{'ng-show' => 'books.length'}
+		.col-xs-12.col-sm-6.col-md-4{'ng-repeat' => 'book in books'}
+			%p {{ book.name_ru }}
+			%p {{ book.author }}
+			%p= link_to image_tag('', 'ng-src' => '{{ book.image["url"] }}', class: 'img-responsive'), '/#/book/{{ book.id }}'
+			%p= link_to 'Скачать', '{{ book.link }}', class: 'btn'
+	.row{'ng-hide' => 'books.length'}
+		.col-xs-12
+			%p В данной категории пока не хранится ни одной книги.
