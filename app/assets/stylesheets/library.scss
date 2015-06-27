@@ -37,7 +37,23 @@ body {
 			li {
 				list-style: none;
 				padding: 5px 0;
-				border-bottom: 1px solid #00b4ae;
+				min-height: 300px;
+				p {
+					margin: 0;
+					a {
+						font-size: 12px;
+					}
+					&.author {
+						font-style: italic;
+						border-bottom: 1px solid #00b4ae;
+					}
+				}
+				@media (min-width: 768px) and (max-width: 996px) {
+					min-height: 275px;
+				}
+				@media (max-width: 767px) {
+					min-height: 0;
+				}
 			}
 		}
 	}
