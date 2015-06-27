@@ -41,5 +41,4 @@ library.controller('CurrentCtrl', ['$http','$routeParams','$scope', function($ht
 	$http.get($scope.url).success(function(data) {
 		$scope.book = data;
 	});
-	$scope.string = $scope.book;
 }]);
