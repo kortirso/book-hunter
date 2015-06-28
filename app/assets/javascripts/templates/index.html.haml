@@ -8,6 +8,6 @@
 			%ul
 				.col-xs-12.col-sm-3.col-md-2.last{'ng-repeat' => 'book in lastbooks'}
 					%li
-						%p= link_to image_tag('', 'ng-src' => '{{ book.image["url"] }}', class: 'img-responsive'), '/#/book/{{ book.id }}'
+						%p= link_to image_tag('', 'ng-src' => '{{ book.image["url"] }}', class: 'img-responsive'), '/#/book/{{ book.id }}', title: 'Посмотреть подробную информацию о книге', data: {toggle: 'tooltip', placement: 'bottom'}
 						%p= link_to '{{ book.name_ru}},', '/#/book/{{ book.id }}'
 						%p.author= link_to '{{ book.author }}', '/#/book/{{ book.id }}'
