@@ -19,4 +19,5 @@
 //= require modernizr.custom
 //= require jquery.dlmenu
 //= require script
+//= require_tree ./controllers
 //= require_tree .
