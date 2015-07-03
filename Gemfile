@@ -19,6 +19,7 @@ gem 'sprockets', '2.12.3'
 gem 'simple_form'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'http_accept_language'
 #gem 'kaminari'
 #gem 'pg_search'
 

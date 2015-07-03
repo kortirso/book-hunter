@@ -1,7 +1,7 @@
 !!! XHTML 5
 %html
 	%head
-		%title Book-Hunter
+		%title= t('index.title')
 		= stylesheet_link_tag 'application', media: 'all'
 		= javascript_include_tag 'application'
 		= csrf_meta_tags
@@ -14,7 +14,10 @@
 						%p
 							= link_to "Выйти", destroy_admin_session_path, method: :delete, class: 'btn'
 							= link_to 'Новая книга', new_book_path, class: 'btn'
-					%h3 Навигация в библиотеке
+					.locale_box
+						= link_to 'ENG', change_locale_path('en'), class: 'btn'
+						= link_to 'РУС', change_locale_path('ru'), class: 'btn'
+					%h3= t('menu.head')
 					= render 'layouts/menu'
 				.col-xs-6.col-sm-8.col-md-9
 					= yield

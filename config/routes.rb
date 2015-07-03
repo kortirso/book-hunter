@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 	get 'library/:id' => 'library#books'
 	get 'book/:id' => 'library#currentbook'
 	get 'lastbooks' => 'library#lastbooks'
+
+	get 'locale/:name' => 'library#locale', as: 'change_locale'
+
 	root to: 'library#index'
 	match "*path", to: "application#catch_404", via: :all
 end

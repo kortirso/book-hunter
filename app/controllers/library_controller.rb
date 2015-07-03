@@ -4,6 +4,11 @@ class LibraryController < ApplicationController
 	def index
 	end
 
+	def locale
+		params[:name] == 'ru' ? session[:locale] = 'ru' : session[:locale] = 'en'
+		redirect_to root_path
+	end
+
 	def category
 		category = Point.where(id: params[:id]).first
 		respond_with(category) do |format|
