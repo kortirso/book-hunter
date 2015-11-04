@@ -8,6 +8,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem 'figaro'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'devise'
@@ -20,12 +22,13 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'http_accept_language'
-#gem 'kaminari'
-#gem 'pg_search'
+gem 'execjs'
+gem 'therubyracer'
 
 group :test do
 	gem 'rspec-rails'
 	gem 'factory_girl_rails'
+	gem 'capybara'
 end
 
 group :development, :test do

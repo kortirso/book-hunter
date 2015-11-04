@@ -2,8 +2,8 @@ default: &default
   adapter: postgresql
   pool: 5
   port: 5432
-  username: rails
-  password: rails
+  username: <%= ENV['BOOKHUNTER_DATABASE_USERNAME'] %>
+  password: <%= ENV['BOOKHUNTER_DATABASE_PASSWORD'] %>
   encoding: utf8
 
 development:
