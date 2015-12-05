@@ -1,102 +1,102 @@
 @import url(http://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,cyrillic);
 
 * {
-	font-family: 'Didact Gothic', sans-serif;
-	font-size: 16px;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
 }
 
 html {
-	overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 html,body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	h1, h2, h3, h4 {
-		text-align: center;
-	}
+    h1, h2, h3, h4 {
+        text-align: center;
+    }
 
-	h1 {
-		@media (max-width: 767px) {
-			font-size: 22px;
-		}
-	}
+    h1 {
+        @media (max-width: 767px) {
+            font-size: 22px;
+        }
+    }
 
-	h3 {
-		@media (max-width: 767px) {
-			font-size: 16px;
-		}
-	}
+    h3 {
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
 
-	.lastbooks {
-		ul {
-			padding-left :10px;
-			li {
-				list-style: none;
-				padding: 5px 0;
-				min-height: 300px;
-				p {
-					margin: 0;
-					a {
-						font-size: 12px;
-					}
-					&.author {
-						font-style: italic;
-						border-bottom: 1px solid #00b4ae;
-					}
-				}
-				@media (min-width: 768px) and (max-width: 996px) {
-					min-height: 275px;
-				}
-				@media (max-width: 767px) {
-					min-height: 0;
-				}
-			}
-		}
-	}
+    .lastbooks {
+        ul {
+            padding-left :10px;
+            li {
+                list-style: none;
+                padding: 5px 0;
+                min-height: 300px;
+                p {
+                    margin: 0;
+                    a {
+                        font-size: 12px;
+                    }
+                    &.author {
+                        font-style: italic;
+                        border-bottom: 1px solid #00b4ae;
+                    }
+                }
+                @media (min-width: 768px) and (max-width: 996px) {
+                    min-height: 275px;
+                }
+                @media (max-width: 767px) {
+                    min-height: 0;
+                }
+            }
+        }
+    }
 
-	.container {
-		@media (min-width: 768px) and (max-width: 1200px) {
-			width: 100%;
-		}
-	}
+    .container {
+        @media (min-width: 768px) and (max-width: 1200px) {
+            width: 100%;
+        }
+    }
 
-	.btn {
-		color: #FFF;
-		background: #00b4ae;
+    .btn {
+        color: #FFF;
+        background: #00b4ae;
 
-		&:hover {
-			color: #FFF;
-			background: #00a6a0;
-		}
-	}
+        &:hover {
+            color: #FFF;
+            background: #00a6a0;
+        }
+    }
 }
 
 .menu-bar {
-	.dl-menuwrapper li a {
-		@media (max-width: 767px) {
-			font-size: 14px;
-		}
-	}
+    .dl-menuwrapper li a {
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
+    }
 }
 
 .locale_box {
-	padding: 10px;
+    padding: 10px;
 }
 
 .simple_form {
-	h4 {
-		text-align: left;
-		font-weight: 600;
-		font-size: 16px;
-	}
+    h4 {
+        text-align: left;
+        font-weight: 600;
+        font-size: 16px;
+    }
 }
 
 .book, .last {
-	img:hover {
-		box-shadow: 0 0 10px #00a6a0;
-	}
+    img:hover {
+        box-shadow: 0 0 10px #00a6a0;
+    }
 }

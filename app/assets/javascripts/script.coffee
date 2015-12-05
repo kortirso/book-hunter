@@ -1,6 +1,6 @@
 $ ->
-	$('#dl-menu').dlmenu()
-	$('.point').click ->
-		$("body, html").animate
-			scrollTop: 0,
-			250
+    $('#dl-menu').dlmenu()
+    $('.point').click ->
+        $("body, html").animate
+            scrollTop: 0,
+            250

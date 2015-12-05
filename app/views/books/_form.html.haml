@@ -16,8 +16,8 @@
         .col-xs-12.col-md-6
             = f.association :point, label: 'Категория', label_method: :caption_ru, value_method: :id, include_blank: false
         .col-xs-12
-            %h4 Изображение для книги
-            %p= f.file_field :image, label: 'Изображение'
+            %h4 Изображение
+            %p= f.file_field :image, label: 'Укажите файл изображения'
         .col-xs-12
             %h4 Книга
             %p= f.file_field :link, label: 'Укажите файл книги'

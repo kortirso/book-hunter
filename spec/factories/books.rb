@@ -1,5 +1,5 @@
 FactoryGirl.define do
-	factory :book do
-				
-	end
+    factory :book do
+
+    end
 end
