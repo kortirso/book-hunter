@@ -25,15 +25,17 @@ gem 'http_accept_language'
 gem 'execjs'
 gem 'therubyracer'
 
-group :test do
-    gem 'rspec-rails'
-    gem 'factory_girl_rails'
-    gem 'capybara'
-end
-
 group :development, :test do
-    gem 'byebug'
-    gem 'web-console', '~> 2.0'
-    gem 'spring'
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'capybara-webkit'
 end
 
+group :test do
+  gem 'shoulda-matchers'
+end
