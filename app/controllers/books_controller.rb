@@ -13,7 +13,9 @@ class BooksController < ApplicationController
         @book = Book.new(book_params)
         if @book.save
             uploaded_io = params[:book][:link]
-            File.open(Rails.root.join('public','uploads','book',@book.id.to_s,uploaded_io.original_filename), 'wb') do |file|
+            path = "public/uploads/book/#{@book.id.to_s}"
+            Dir.mkdir(Rails.root.join(path), 0755)
+            File.open(Rails.root.join(path,uploaded_io.original_filename), 'wb') do |file|
                 file.write(uploaded_io.read)
             end
             @book.update_attribute('link', 'uploads/book/' + @book.id.to_s + '/' + uploaded_io.original_filename)
