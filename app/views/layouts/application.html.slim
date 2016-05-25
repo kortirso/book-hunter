@@ -1,0 +1,16 @@
+doctype html
+html lang='en'
+    head
+        meta charset='utf-8'
+        meta name='viewport' content='width=device-width, initial-scale=1.0'
+        title Book Hunter
+        = stylesheet_link_tag 'application'
+        = javascript_include_tag 'application'
+        = csrf_meta_tag
+    body
+        .row
+            .large-3
+                h3= t('menu.head')
+                = render 'layouts/menu'
+            .large-9
+                = yield

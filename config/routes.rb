@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
     devise_for :admins
     get 'books' => 'books#index', as: 'books'
     get 'books/new' => 'books#new', as: 'new_book'

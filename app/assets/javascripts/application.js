@@ -12,12 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require angular/angular
-//= require angular-route/angular-route
-//= require angular-rails-templates
-//= require library
-//= require modernizr.custom
-//= require jquery.dlmenu
-//= require script
-//= require_tree ./controllers
+//= require foundation
 //= require_tree .
+$(function(){ $(document).foundation(); });
