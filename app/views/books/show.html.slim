@@ -1,1 +1,13 @@
-= @book.link
+.row
+    h1= @book.name_ru
+    .columns.medium-4
+        = image_tag @book.image
+    .columns.medium-8
+        p= "Автор - #{@book.author}"
+        p= "Издатель - #{@book.publisher}"
+        - unless @book.isbn.nil?
+            p= "ISBN - #{@book.isbn}"
+        p
+            strong Описание
+        p= @book.caption
+        p= link_to 'Посмотреть', "#{@book.link}", class: 'button'

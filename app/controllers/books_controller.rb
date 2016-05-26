@@ -7,7 +7,8 @@ class BooksController < ApplicationController
     end
 
     def show
-        @book = Book.find(params[:id])
+        @book = Book.find_by(name: params[:id])
+        render_not_found if @book.nil?
     end
 
     def new
@@ -16,7 +17,7 @@ class BooksController < ApplicationController
 
     def create
         @book = Book.create(book_params)
-        render :index
+        redirect_to books_path
     end
 
     private

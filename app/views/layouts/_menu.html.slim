@@ -1,5 +1,7 @@
 h3= t('menu.head')
 ul.vertical.menu data-accordion-menu=''
+    li
+        = link_to 'Главная', root_path
     - @points.where(level: 1).each do |point|
         li
             = link_to point.caption_ru, library_path(point.name)

@@ -1,1 +1,8 @@
 h1= "Раздел - #{@point.caption_ru}"
+.row
+    - @books.each do |book|
+        .columns.medium-3.small-4.end
+            p= image_tag book.image
+            p= book.name_ru
+            p= "Автор - #{book.author}"
+            p= link_to 'Посмотреть', book_path(book.name), class: 'button'

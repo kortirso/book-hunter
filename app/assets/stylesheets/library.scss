@@ -22,7 +22,7 @@ html {
     }
 }
 
-html,body {
+html, body {
     margin: 0;
     padding: 0;
 }
@@ -43,16 +43,6 @@ body {
             font-size: 16px;
         }
     }
-
-    .btn {
-        color: #FFF;
-        background: #00b4ae;
-
-        &:hover {
-            color: #FFF;
-            background: #00a6a0;
-        }
-    }
 }
 
 .simple_form {
@@ -60,5 +50,12 @@ body {
         text-align: left;
         font-weight: 600;
         font-size: 16px;
+    }
+}
+
+.book {
+    .book-image {
+        padding: 3px;
+        border: 1px solid #000;
     }
 }
