@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
     before_action :authenticate_admin!, except: :show
+    skip_before_filter :verify_authenticity_token, only: :create
     
     def index
         @books = Book.all
@@ -14,7 +15,8 @@ class BooksController < ApplicationController
     end
 
     def create
-        @book = Book.create!(book_params)
+        @book = Book.create(book_params)
+        render :index
     end
 
     private

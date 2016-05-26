@@ -9,8 +9,7 @@ html lang='en'
         = csrf_meta_tag
     body
         .row
-            .large-3
-                h3= t('menu.head')
+            .medium-3.columns
                 = render 'layouts/menu'
-            .large-9
+            .medium-9.columns
                 = yield
