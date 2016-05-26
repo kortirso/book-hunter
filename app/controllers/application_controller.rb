@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::Base
-    # Prevent CSRF attacks by raising an exception.
-    # For APIs, you may want to use :null_session instead.
     before_filter :set_locale
     protect_from_forgery with: :exception
     before_action :get_menu_items
@@ -9,6 +7,11 @@ class ApplicationController < ActionController::Base
 
     def catch_404
         raise ActionController::RoutingError.new(params[:path])
+    end
+
+    def locale
+        params[:name] == 'ru' ? session[:locale] = 'ru' : session[:locale] = 'en'
+        redirect_to root_path
     end
 
     private

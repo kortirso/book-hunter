@@ -1,14 +1,14 @@
 ul.vertical.menu data-accordion-menu=''
     - @points.where(level: 1).each do |point|
         li
-            = link_to point.caption_ru, "library/#{point.id}"
+            = link_to point.caption_ru, library_path(point.name)
             - if @points.where(parent: point.id).count > 0
                 ul.menu.vertical.nested
                     - @points.where(parent: point.id).each do |sub|
                         li
-                            = link_to sub.caption_ru, "library/#{sub.id}"
+                            = link_to sub.caption_ru, library_path(sub.name)
                             - if @points.where(parent: sub.id).count > 0
                                 ul.menu.vertical.nested
                                     - @points.where(parent: sub.id).each do |sub_2|
                                         li
-                                            = link_to sub_2.caption_ru, "library/#{sub_2.id}"
+                                            = link_to sub_2.caption_ru, library_path(sub_2.name)

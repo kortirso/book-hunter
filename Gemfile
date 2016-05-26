@@ -16,6 +16,7 @@ gem 'slim'
 gem 'responders', '~> 2.0'
 gem 'simple_form'
 gem 'carrierwave'
+gem 'rmagick'
 gem 'http_accept_language'
 
 group :development, :test do
