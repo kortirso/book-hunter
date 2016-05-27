@@ -30,6 +30,14 @@ group :development, :test do
     gem 'capybara-webkit'
 end
 
+group :development do
+    gem 'bullet'
+    gem 'capistrano', require: false
+    gem 'capistrano-bundler', require: false
+    gem 'capistrano-rails', require: false
+    gem 'capistrano-rvm', require: false
+end
+
 group :test do
     gem 'shoulda-matchers'
     gem 'json_spec'
