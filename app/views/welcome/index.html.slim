@@ -2,9 +2,5 @@ h1 Добро пожаловать в персональную библиоте�
 h4 Последние добавленные книги
 .row
     - @last.each do |book|
-        .columns.medium-3.small-4.end.book
-            p.book-image= image_tag book.image
-            p= book.name_short
-            p= "Автор - #{book.author}"
-            p= "Раздел - #{book.point.caption_ru}"
-            p= link_to 'Посмотреть', book_path(book.name), class: 'button'
+        .columns.medium-3.small-4.end
+            = react_component 'Book', book: book, name: book.name_short, point: book.point["caption_ru"], link: book_path(book.name)
