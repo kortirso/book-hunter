@@ -19,6 +19,8 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'http_accept_language'
 
+gem 'react-rails', '>=1.8.0'
+
 group :development, :test do
     gem 'byebug'
     gem 'spring'
